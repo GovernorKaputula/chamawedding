@@ -1,0 +1,668 @@
+/*==================================
+ 1. CSS Variables & Base Styles 
+==================================*/
+
+:root {
+    --color-primary: #a36f6f; /* Muted Dusty Rose/Mauve */
+    --color-secondary: #7e5757; /* Deeper Burgundy/Rose for headers/buttons */
+    --color-text: #4a4a4a; /* Softer dark text (not pure black) */
+    --color-background: #fffafa; /* Very light ivory/off-white */
+    --color-accent-light: #f5e6e6; /* Light pink background for sections */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+    --border-style: 2px solid var(--color-primary);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* NEW: Enables smooth scrolling when clicking on anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.7; 
+    text-align: center;
+}
+
+/*==================================
+ 2. Typography & Readability
+==================================*/
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 5vw; /* Large, responsive size */
+    min-font-size: 4rem; 
+    margin-bottom: 0.25rem;
+}
+
+.couple-names {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.couple-names::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: white;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.pre-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.readable-text,
+.events-schedule address,
+.events-schedule p,
+.contact-details p {
+    max-width: 650px; 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+/*==================================
+ 3. Layout: Hero & Main Containers 
+==================================*/
+
+.hero {
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 15px rgba(0,0,0,0.9); 
+    position: relative; 
+    z-index: 1; 
+}
+
+/* Semi-transparent overlay for better text contrast */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); 
+    z-index: -1; 
+}
+
+.hero-content {
+    padding: 3rem 4rem;
+    border-radius: 5px;
+    position: relative; 
+    z-index: 2; 
+    /* Subtle Glassmorphism effect */
+    background-color: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pre-heading, .date {
+    text-shadow: none; 
+}
+
+/*==================================
+ 4. Invitation & Couple Intro
+==================================*/
+
+.details-section {
+    padding-top: 40px; 
+}
+
+.invitation-message {
+    padding: 60px 20px;
+    background-color: white;
+}
+.invitation-message h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.invitation-message p {
+    font-style: italic;
+    color: var(--color-text);
+}
+
+.couple-intro-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.couple-card {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.couple-card h3 {
+    font-family: var(--font-heading);
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+.couple-card p {
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 5px solid var(--color-accent-light);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*==================================
+ 5. Countdown Timer
+==================================*/
+
+.countdown-section {
+    padding: 60px 20px;
+    background-color: var(--color-secondary);
+    color: white;
+    margin-bottom: 40px;
+}
+.countdown-section h2 {
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: none;
+}
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+.time-unit {
+    text-align: center;
+}
+.time-unit span {
+    display: block;
+    font-size: 4.5rem; 
+    font-family: var(--font-heading);
+    color: var(--color-accent-light);
+    line-height: 1;
+    font-variant-numeric: tabular-nums; 
+}
+.time-unit small {
+    display: block;
+    font-size: 1rem; 
+    text-transform: uppercase;
+    margin-top: 10px; 
+    font-weight: 300;
+}
+
+/*==================================
+ 6. Events Schedule (Timeline)
+==================================*/
+
+/* NOTE: .events-schedule should probably be .content-section to match your HTML */
+.content-section {
+    padding: 60px 20px; /* Base padding for all sections */
+}
+
+
+.event-details {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; /* Align events to the top */
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 1100px; /* Added max-width for better structure */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event {
+    flex: 0 1 30%; /* Changed to 30% since you have three events now */
+    padding: 0 15px;
+    text-align: center; /* Center content within the event box */
+}
+
+.event h4 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* ICON IMPROVEMENT STYLES */
+.event-icon {
+    font-size: 3.5rem; 
+    color: var(--color-secondary); 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    margin: 0 auto 20px; 
+    line-height: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-icon:hover {
+    transform: scale(1.05) rotate(-2deg); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-divider {
+    width: 1px;
+    height: 180px; /* Increased height to accommodate space between event blocks */
+    background-color: var(--color-primary);
+    border: none;
+    opacity: 0.7; 
+}
+
+.time-details {
+    /* Adjusted time details width for better readability */
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-link {
+    display: inline-block;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+}
+.map-link:hover {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+/*==================================
+ 7. RSVP Form
+==================================*/
+
+.form-section {
+    padding: 60px 20px;
+    background-color: var(--color-accent-light); /* Added background color to the section */
+}
+
+.rsvp-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding: 20px;
+    text-align: left;
+    background: white; /* Added white background for the form itself */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px; 
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+}
+.rsvp-form input[type="text"],
+.rsvp-form select,
+.rsvp-form input[type="number"],
+.rsvp-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: white; 
+    transition: border-color 0.3s;
+}
+.rsvp-form textarea {
+    resize: vertical;
+}
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+}
+.form-section .cta-button {
+    margin-top: 20px;
+    width: 100%; 
+}
+
+/* Cleaned up old radio styling, only need styling for the dropdown */
+.attendance-group select {
+    appearance: none; /* Removes default OS styling on some browsers */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237e5757' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+}
+
+/* Dynamic RSVP message area */
+#rsvp-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    display: none; 
+}
+
+/*==================================
+ 8. Gallery & Contact - NEW GRID STYLES
+==================================*/
+
+.photo-grid-5 {
+    display: grid;
+    /* Create a grid with 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 15px; /* Spacing between photos */
+    margin: 30px auto 50px;
+    max-width: 1200px;
+}
+
+/* Style for all images */
+.photo-grid-5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+.photo-grid-5 img:hover {
+    transform: scale(1.02);
+}
+
+/* Make the first photo span a 2x2 area */
+.photo-grid-5 .main-photo {
+    /* Main photo spans 2 columns and 2 rows */
+    grid-column: span 2; 
+    grid-row: span 2;
+}
+
+/* Container for the remaining 4 photos */
+.photo-grid-5 .sub-photos {
+    /* This section occupies the remaining 2 columns */
+    grid-column: span 2;
+    grid-row: span 2;
+    display: grid;
+    /* Arrange the four small photos in a 2x2 grid */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.photo-grid-5 .sub-photos img {
+    /* Set a consistent aspect ratio for the smaller photos */
+    aspect-ratio: 1 / 1; 
+}
+
+
+.contact-details {
+    padding: 30px;
+    border: none;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    background: var(--color-accent-light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.contact-details h3 {
+    text-transform: none;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+.contact-details p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.contact-details a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/*==================================
+ 9. Navigation & Buttons
+==================================*/
+
+/* Sticky Navigation Bar */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 250, 250, 0.98); 
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 1000; 
+    padding: 15px 0;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--color-secondary); 
+    color: white;
+    padding: 18px 40px; 
+    border-radius: 5px; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+.cta-button:hover {
+    background: var(--color-primary); 
+    transform: translateY(-3px);
+}
+.pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(163, 111, 111, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(163, 111, 111, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(163, 111, 111, 0); }
+}
+
+.site-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.site-navigation a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-weight: 400; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+.site-navigation a:hover {
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.registry-section {
+    padding: 60px 20px;
+    background-color: var(--color-accent-light);
+    margin: 40px auto;
+}
+
+footer {
+    padding: 30px;
+    background-color: var(--color-secondary);
+    color: white;
+    font-size: 1rem;
+    margin-top: 60px;
+    letter-spacing: 1px;
+}
+
+/*==================================
+ 10. Scroll Effects 
+==================================*/
+
+/* Base hidden state */
+[data-scroll] {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+
+/* Initial offsets */
+[data-scroll="fade-up"] {
+    transform: translateY(40px); 
+}
+
+[data-scroll="fade-left"] {
+    transform: translateX(-40px);
+}
+
+[data-scroll="fade-right"] {
+    transform: translateX(40px);
+}
+
+/* Activated State: When element is visible and JS adds '.scrolled' */
+.scrolled {
+    opacity: 1;
+    transform: translate(0, 0); 
+}
+
+/*==================================
+ 11. Media Queries (Responsiveness)
+==================================*/
+
+@media (max-width: 992px) {
+    
+    .couple-intro-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .profile-photo {
+        max-width: 250px;
+        height: 250px;
+    }
+
+    /* Timeline Stack */
+    .event-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .event-divider {
+        width: 80%;
+        height: 1px;
+        margin: 10px auto;
+    }
+    .event {
+        flex: 0 1 100%;
+    }
+
+    .story-section {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw; 
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 3rem;
+    }
+    
+    .countdown-timer {
+        flex-wrap: wrap;
+        gap: 15px 30px;
+    }
+    .time-unit span {
+        font-size: 3rem;
+    }
+    
+    /* Gallery adjustment for 5-photo grid on small screens */
+    .photo-grid-5 {
+        grid-template-columns: 1fr; /* Stack everything into a single column */
+        grid-gap: 10px;
+    }
+    .photo-grid-5 .main-photo {
+        grid-column: auto; /* Remove spanning */
+        grid-row: auto;
+    }
+    .photo-grid-5 .sub-photos {
+        /* Arrange sub-photos in a 2-column grid */
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-navigation ul {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .site-navigation a {
+        font-size: 0.8rem;
+    }
+}
