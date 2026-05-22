@@ -1,113 +1,98 @@
-💍 Chama Wedding Invitation Website
+💍 Chama Wedding Website
+Project Overview
 
-A modern, responsive wedding invitation website built using HTML, CSS, and JavaScript, featuring a live countdown, RSVP system, event timeline, and interactive gallery.
+This project is a modern digital wedding invitation website built to replace traditional paper invitations.
 
-🌐 Live Demo
+It provides guests with a beautiful, interactive experience where they can view wedding details, explore the couple’s story, check the event timeline, and RSVP online.
 
-👉 https://governorkaputula.github.io/chamawedding/
+The website is fully responsive and designed for both mobile and desktop users.
 
-📸 Project Screenshots
-
-Add your screenshots inside an /images folder in your repository.
-
-🏠 Hero Section
-
-💒 Invitation / Couple Section
-
-⏳ Live Countdown Timer
-
-📅 Wedding Timeline
-
-📝 RSVP Form
-
-🖼️ Gallery Section
-
-📌 Project Overview
-
-This project is a digital wedding invitation platform designed to replace traditional paper invitations. It allows guests to view event details, track the countdown to the wedding day, and RSVP online.
-
-It is fully responsive and optimized for both mobile and desktop users.
-
-✨ Features
-💒 Elegant Hero Section
-Full-screen background image
-Couple names and wedding date
-Responsive typography and layout
-📖 Couple & Invitation Section
-Personalized wedding message
-Family introduction
-Clean card-based layout
-⏳ Live Countdown Timer
-Real-time countdown to wedding date
-Days, hours, minutes, seconds
-📅 Event Timeline
-Ceremony schedule
-Photoshoot break
-Reception details
-Google Maps navigation links
-📝 RSVP System
-Guest name input
-Attendance selection
-Guest count
-Dietary preferences
-Backend integration using Google Apps Script
-🖼️ Photo Gallery
-Responsive grid layout
-Interactive images
-Smooth scroll animations
-🛠️ Technologies Used
+Tools & Technologies
 HTML5
 CSS3
 JavaScript (Vanilla JS)
 Google Fonts
-Font Awesome Icons
+Font Awesome
 Google Apps Script (RSVP backend)
 GitHub Pages (Hosting)
-📂 Project Structure
-chamawedding/
-│
-├── index.html
-├── style.css
-├── script.js (embedded in HTML)
-├── images/
-│   ├── hero.png
-│   ├── couple.png
-│   ├── countdown.png
-│   ├── timeline.png
-│   ├── rsvp.png
-│   └── gallery.png
-└── README.md
-📬 RSVP System
+Features
+Responsive wedding invitation design
+Hero section with couple names and date
+Smooth scroll animations
+Live countdown timer
+Wedding event timeline
+Interactive photo gallery
+RSVP form with backend submission
+Google Maps integration for venue directions
+Dataset / Content Information
 
-The RSVP form sends data to a Google Sheets database using a Google Apps Script endpoint.
+This project is a static web application and does not use a dataset.
 
-Data captured:
-Full Name
-Attendance status
-Number of guests
-Dietary requirements
-🚀 Deployment
+It is structured around event information including:
 
-This project is hosted using GitHub Pages:
+Couple details
+Wedding date
+Ceremony schedule
+Reception details
+Venue locations
+Guest RSVP responses
+Implementation Details
+UI Design
 
-Push repository to GitHub
-Go to Settings → Pages
-Select main branch
-Save and deploy
-Your site goes live instantly
-📈 Future Improvements
-Admin dashboard for RSVP tracking
-Email confirmation system
-WhatsApp RSVP integration
-Music/audio background
-QR code guest check-in system
-Password-protected guest access
-Mobile app version
-👨‍💻 Developer
+The website uses a clean, elegant layout with smooth scroll animations to enhance user experience.
 
-Designed & Developed by: Kenneth Gondwe Kaputula
+Countdown Timer
 
+A JavaScript-based real-time countdown calculates the remaining time until the wedding date.
 
-📄 License
+RSVP System
 
-This project is for personal/event use. All rights reserved.
+The RSVP form collects guest responses and sends them to a Google Sheets database using a Google Apps Script endpoint.
+
+Gallery Section
+
+A responsive image grid displays wedding-related photos with smooth interaction effects.
+
+Navigation
+
+A sticky navigation bar allows users to easily move between sections.
+
+Key Insights (Design & Development)
+Interactive web experiences improve user engagement compared to static invitations
+Countdown timers create emotional anticipation for events
+RSVP automation reduces manual guest management
+Clean UI structure improves readability and mobile usability
+Lightweight JavaScript can create powerful dynamic features without frameworks
+Key Skills Demonstrated
+Frontend web development
+Responsive UI design
+DOM manipulation with JavaScript
+Event handling and form processing
+API integration (Google Apps Script)
+Git & GitHub version control
+Static site deployment using GitHub Pages
+Project Outcome
+
+This project demonstrates how a traditional wedding invitation can be transformed into a modern digital experience.
+
+It successfully combines design and functionality to:
+
+Improve guest accessibility
+Automate RSVP collection
+Provide real-time event countdown
+Deliver a visually engaging experience
+Files in this Repository
+index.html (main website structure)
+style.css (styling and layout)
+script.js (interactive features embedded in HTML)
+images/ (wedding photos and assets)
+README.md (project documentation)
+Live Demo
+
+👉 https://governorkaputula.github.io/chamawedding/
+
+Author
+
+Kenneth Gondwe Kaputula
+Electrical and Electronics Engineer
+YellowPhase Electrical & Mechanical Engineers
