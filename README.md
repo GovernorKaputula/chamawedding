@@ -1,4 +1,4 @@
-💍 Chama Wedding Website
+💍 Chama Wedding Invitation Website
 Project Overview
 
 This project is a modern digital wedding invitation website built to replace traditional paper invitations.
@@ -12,7 +12,7 @@ HTML5
 CSS3
 JavaScript (Vanilla JS)
 Google Fonts
-Font Awesome
+Font Awesome Icons
 Google Apps Script (RSVP backend)
 GitHub Pages (Hosting)
 Features
@@ -24,7 +24,7 @@ Wedding event timeline
 Interactive photo gallery
 RSVP form with backend submission
 Google Maps integration for venue directions
-Dataset / Content Information
+Content Information
 
 This project is a static web application and does not use a dataset.
 
@@ -51,42 +51,42 @@ The RSVP form collects guest responses and sends them to a Google Sheets databas
 
 Gallery Section
 
-A responsive image grid displays wedding-related photos with smooth interaction effects.
+A responsive image grid displays wedding photos with smooth interaction effects.
 
 Navigation
 
 A sticky navigation bar allows users to easily move between sections.
 
 Key Insights (Design & Development)
-Interactive web experiences improve user engagement compared to static invitations
-Countdown timers create emotional anticipation for events
-RSVP automation reduces manual guest management
-Clean UI structure improves readability and mobile usability
+Interactive websites improve engagement compared to static invitations
+Countdown timers create anticipation and emotional engagement
+RSVP automation reduces manual tracking
+Clean UI improves mobile experience
 Lightweight JavaScript can create powerful dynamic features without frameworks
 Key Skills Demonstrated
-Frontend web development
-Responsive UI design
-DOM manipulation with JavaScript
-Event handling and form processing
+Frontend development (HTML, CSS, JavaScript)
+Responsive design principles
+DOM manipulation
+Event handling and form submission
 API integration (Google Apps Script)
 Git & GitHub version control
-Static site deployment using GitHub Pages
+GitHub Pages deployment
 Project Outcome
 
 This project demonstrates how a traditional wedding invitation can be transformed into a modern digital experience.
 
-It successfully combines design and functionality to:
+It successfully:
 
-Improve guest accessibility
-Automate RSVP collection
-Provide real-time event countdown
-Deliver a visually engaging experience
-Files in this Repository
-index.html (main website structure)
-style.css (styling and layout)
-script.js (interactive features embedded in HTML)
-images/ (wedding photos and assets)
-README.md (project documentation)
+Improves guest accessibility
+Automates RSVP collection
+Provides real-time countdown updates
+Enhances user experience with interactive UI
+Files in This Repository
+index.html — Main website structure
+style.css — Styling and layout
+script.js — Interactive features (embedded)
+images/ — Media assets
+README.md — Project documentation
 Live Demo
 
 👉 https://governorkaputula.github.io/chamawedding/
